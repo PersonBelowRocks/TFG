@@ -2364,6 +2364,69 @@
             ]
         },
         {
+            "pakku_id": "I1TP9ts8Cfsvim7T",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "decorative-blocks",
+                "modrinth": "decorative-blocks"
+            },
+            "name": {
+                "curseforge": "Decorative Blocks",
+                "modrinth": "Decorative Blocks"
+            },
+            "id": {
+                "curseforge": "362528",
+                "modrinth": "t6BIRVZn"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "decorative_blocks-forge-1.20.1-4.1.3.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5089/406/decorative_blocks-forge-1.20.1-4.1.3.jar",
+                    "id": "5089406",
+                    "parent_id": "362528",
+                    "hashes": {
+                        "sha1": "10263d3e99807662ff065edce0e470fe62e84b30",
+                        "md5": "3ccc7e414c9de806448d94eef399cfd7"
+                    },
+                    "required_dependencies": [],
+                    "size": 573928,
+                    "date_published": "2024-02-08T12:01:40.793Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "decorative_blocks-forge-1.20.1-4.1.3.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge",
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/t6BIRVZn/versions/nGmyeiug/decorative_blocks-forge-1.20.1-4.1.3.jar",
+                    "id": "nGmyeiug",
+                    "parent_id": "t6BIRVZn",
+                    "hashes": {
+                        "sha512": "e48dae175eb053ce0f7035e634264f8e84e60560609a5e0391bff01c3e584e6c0fa28fd88fde852b674876b8e21f923444c9ad2726326e337da2d69af0261a70",
+                        "sha1": "10263d3e99807662ff065edce0e470fe62e84b30"
+                    },
+                    "required_dependencies": [],
+                    "size": 573928,
+                    "date_published": "2024-02-08T12:01:47.419222Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "LdL5SyxWFRXcqOzw",
             "pakku_links": [
                 "CBSBD7u2DdsFEaoX"
@@ -2861,6 +2924,74 @@
                     "required_dependencies": [],
                     "size": 610871,
                     "date_published": "2024-05-14T23:42:16.590Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "z6T2aNyBdJeyLvWs",
+            "pakku_links": [
+                "3B5EGC3hh54PlLuy"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "every-compat",
+                "modrinth": "every-compat"
+            },
+            "name": {
+                "curseforge": "Every Compat (Wood Good)",
+                "modrinth": "Every Compat (Wood Good)"
+            },
+            "id": {
+                "curseforge": "628539",
+                "modrinth": "eiktJyw1"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "everycomp-1.20-2.7.12.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6098/843/everycomp-1.20-2.7.12.jar",
+                    "id": "6098843",
+                    "parent_id": "628539",
+                    "hashes": {
+                        "sha1": "538f3788f1c28aed1881f1a550463b44831deeab",
+                        "md5": "3b22a09f80dbaa0aadfba9168b6c0795"
+                    },
+                    "required_dependencies": [
+                        "499980"
+                    ],
+                    "size": 2612098,
+                    "date_published": "2025-01-18T09:57:04.457Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "everycomp-1.20-2.7.12.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/eiktJyw1/versions/atv3A4RT/everycomp-1.20-2.7.12.jar",
+                    "id": "atv3A4RT",
+                    "parent_id": "eiktJyw1",
+                    "hashes": {
+                        "sha512": "beb1972e9f15864d3e525e3158339e095111ee6c149a8eb5c82def4e17d4f1ffc2fae269136f05684e34201b7437a18a7721a06437ac56a31ed9f90dca31946e",
+                        "sha1": "538f3788f1c28aed1881f1a550463b44831deeab"
+                    },
+                    "required_dependencies": [
+                        "twkfQtEc"
+                    ],
+                    "size": 2612098,
+                    "date_published": "2025-01-18T09:57:15.498232Z"
                 }
             ]
         },
@@ -3428,6 +3559,140 @@
                     ],
                     "size": 2696876,
                     "date_published": "2024-05-13T09:41:26.110Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "uYzOOB7guRXLtuIc",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "farmers-delight",
+                "modrinth": "farmers-delight"
+            },
+            "name": {
+                "curseforge": "Farmer's Delight",
+                "modrinth": "Farmer's Delight"
+            },
+            "id": {
+                "curseforge": "398521",
+                "modrinth": "R2OftAxM"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "FarmersDelight-1.20.1-1.2.6.jar",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.20"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5962/797/FarmersDelight-1.20.1-1.2.6.jar",
+                    "id": "5962797",
+                    "parent_id": "398521",
+                    "hashes": {
+                        "sha1": "9534a0724ad9426fbfc795e4eeb814d7e8f76b25",
+                        "md5": "3bedf3198980957b909a2ce41557960d"
+                    },
+                    "required_dependencies": [],
+                    "size": 2944818,
+                    "date_published": "2024-12-04T18:10:25.977Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "FarmersDelight-1.20.1-1.2.6.jar",
+                    "mc_versions": [
+                        "1.20",
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/R2OftAxM/versions/MG1Xuspn/FarmersDelight-1.20.1-1.2.6.jar",
+                    "id": "MG1Xuspn",
+                    "parent_id": "R2OftAxM",
+                    "hashes": {
+                        "sha512": "0a9a800cc3ec692e4ceb4403bec2649ef2befddb0bf366ba2a5fbb01c9620bf806dca5fa8e67698d7002fb85e6c4427424f6a42957b6231a4ac31e27e96170eb",
+                        "sha1": "9534a0724ad9426fbfc795e4eeb814d7e8f76b25"
+                    },
+                    "required_dependencies": [],
+                    "size": 2944818,
+                    "date_published": "2024-12-04T18:10:23.541836Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "0oQnA8P5kvSdpErw",
+            "pakku_links": [
+                "F6H99cZ4H6jZRpEK",
+                "uYzOOB7guRXLtuIc"
+            ],
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "farmers-delight-tfc",
+                "modrinth": "farmers-delight-tfc"
+            },
+            "name": {
+                "curseforge": "Farmer's Delight TFC",
+                "modrinth": "Farmer's Delight TFC"
+            },
+            "id": {
+                "curseforge": "951750",
+                "modrinth": "WXhDTEXL"
+            },
+            "redistributable": false,
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "FarmersDelightTFC-1.0.6-forge-1.20.1.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5956/017/FarmersDelightTFC-1.0.6-forge-1.20.1.jar",
+                    "id": "5956017",
+                    "parent_id": "951750",
+                    "hashes": {
+                        "sha1": "096efced31db0b99b0f44583ddf674a74f4ed602",
+                        "md5": "f58700a1f92eddcd1658d141c10c4398"
+                    },
+                    "required_dependencies": [
+                        "302973",
+                        "398521"
+                    ],
+                    "size": 382381,
+                    "date_published": "2024-12-02T10:07:51.253Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "FarmersDelightTFC-1.0.6-forge-1.20.1.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/WXhDTEXL/versions/GDjt10B2/FarmersDelightTFC-1.0.6-forge-1.20.1.jar",
+                    "id": "GDjt10B2",
+                    "parent_id": "WXhDTEXL",
+                    "hashes": {
+                        "sha512": "9eff042daefa2d82d0954f5f9e5f1343a6340cd8212d05fb4aaa3b377808d0c482365b6d56836974d8c6639ed0221a4c69d959c263ea8ce02e3b092ea73fbbe6",
+                        "sha1": "096efced31db0b99b0f44583ddf674a74f4ed602"
+                    },
+                    "required_dependencies": [],
+                    "size": 382381,
+                    "date_published": "2025-01-14T17:29:53.247498Z"
                 }
             ]
         },
@@ -5460,28 +5725,27 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "kubejs-forge-2001.6.5-build.14.jar",
+                    "file_name": "kubejs-forge-2001.6.5-build.16.jar",
                     "mc_versions": [
                         "1.20.1"
                     ],
                     "loaders": [
-                        "forge",
-                        "neoforge"
+                        "forge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/umyGl7zF/versions/AhYGbfUn/kubejs-forge-2001.6.5-build.14.jar",
-                    "id": "AhYGbfUn",
+                    "url": "https://cdn.modrinth.com/data/umyGl7zF/versions/g5igndAv/kubejs-forge-2001.6.5-build.16.jar",
+                    "id": "g5igndAv",
                     "parent_id": "umyGl7zF",
                     "hashes": {
-                        "sha512": "d35ab35c2e589b332283c99627ef50de5248e6f1050724bbdf5f3c253b90f85181a23bbf501c6fdcf1bec38cbfc1fdfbdb72e1a72e261aace3b3b721a8524286",
-                        "sha1": "3a40e639a6b7576deeb1f9e5379beaba85c15280"
+                        "sha512": "819f730d2a9d980bb246d30d67793f06f6a1608381c7ce3577cf25e70dd3d595271f8fcfbf3ae037168842f660e79e49846756bd18c79793b310ff18ab826cbd",
+                        "sha1": "93fcf0eacc5dc08a4f719eaaed1dc93f0dc80f66"
                     },
                     "required_dependencies": [
                         "lhGA9TYQ",
                         "sk9knFPE"
                     ],
-                    "size": 1654724,
-                    "date_published": "2024-06-21T18:29:14.997763Z"
+                    "size": 1654660,
+                    "date_published": "2024-10-28T09:20:35.912552Z"
                 },
                 {
                     "type": "curseforge",
@@ -6135,7 +6399,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "moonlight-1.20-2.13.2-forge.jar",
+                    "file_name": "moonlight-1.20-2.13.50-forge.jar",
                     "mc_versions": [
                         "1.20.1"
                     ],
@@ -6144,20 +6408,20 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/sfzdPwZX/moonlight-1.20-2.13.2-forge.jar",
-                    "id": "sfzdPwZX",
+                    "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/YtLraUBm/moonlight-1.20-2.13.50-forge.jar",
+                    "id": "YtLraUBm",
                     "parent_id": "twkfQtEc",
                     "hashes": {
-                        "sha512": "4c778a5063e73edf9c407f3776913194fb7074202df54d5184aee28e0f3863b22af93f089c3daf1d447d472cd7bf26e459aa2c0f02554e3e0657473ef592e873",
-                        "sha1": "8a3e4b474f6615bb55f1da0107f08f3431092ebc"
+                        "sha512": "0d698745f110d3888eac93f4892f9a231735384379066f72688a2bb18ee96ee630e9bcf058bf0a91b8c2ccebb5f6d6955bc5484626a38ff94b95390e5baf2c6d",
+                        "sha1": "06f6501303653b4cce8dfb3c571491d30d860d0c"
                     },
                     "required_dependencies": [],
-                    "size": 1184120,
-                    "date_published": "2024-09-29T19:53:06.367065Z"
+                    "size": 1223599,
+                    "date_published": "2025-01-18T10:11:34.882758Z"
                 },
                 {
                     "type": "curseforge",
-                    "file_name": "moonlight-1.20-2.13.2-forge.jar",
+                    "file_name": "moonlight-1.20-2.13.50-forge.jar",
                     "mc_versions": [
                         "1.20.1"
                     ],
@@ -6166,16 +6430,16 @@
                         "forge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/5768/751/moonlight-1.20-2.13.2-forge.jar",
-                    "id": "5768751",
+                    "url": "https://edge.forgecdn.net/files/6098/858/moonlight-1.20-2.13.50-forge.jar",
+                    "id": "6098858",
                     "parent_id": "499980",
                     "hashes": {
-                        "sha1": "8a3e4b474f6615bb55f1da0107f08f3431092ebc",
-                        "md5": "534883d070391e776d06562c8464eb0d"
+                        "sha1": "06f6501303653b4cce8dfb3c571491d30d860d0c",
+                        "md5": "6d058757d04b33362a2ce35deb03c488"
                     },
                     "required_dependencies": [],
-                    "size": 1184120,
-                    "date_published": "2024-09-29T19:52:55.607Z"
+                    "size": 1223599,
+                    "date_published": "2025-01-18T10:11:19.243Z"
                 }
             ]
         },
