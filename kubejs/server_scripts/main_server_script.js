@@ -26,6 +26,10 @@ ServerEvents.tags('item', event => {
     registerSophisticatedBackpacksItemTags(event)
     registerTFCAmbientalItemTags(event)
     registerTFCItemTags(event)
+
+    // added by PersonBelowRocks
+    registerDecorativeBlocksItemTags(event)
+    registerHandcraftedItemTags(event)
 })
 
 /**
@@ -51,6 +55,10 @@ ServerEvents.tags('block', event => {
     registerRailWaysBlockTags(event)
     registerSophisticatedBackpacksBlockTags(event)
     registerTFCBlockTags(event)
+
+    // added by PersonBelowRocks
+    registerDecorativeBlocksBlockTags(event)
+    registerHandcraftedBlockTags(event)
 })
 
 /**
@@ -144,4 +152,8 @@ ServerEvents.recipes(event => {
     registerToolBeltRecipes(event)
     registerTreeTapRecipes(event)
     registerWaterFlasksRecipes(event)
+
+    // added by PersonBelowRocks
+    registerDecorativeBlocksRecipes(event)
+    registerHandcraftedRecipes(event)
 })

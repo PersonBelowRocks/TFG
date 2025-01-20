@@ -337,6 +337,11 @@ global.CREATE_DISABLED_ITEMS = [
 	'create:crimson_window_pane',
     'create:warped_window_pane', 
 
+    "create:mangrove_window",
+    "create:mangrove_window_pane",
+    "create:dark_oak_window",
+    "create:dark_oak_window_pane",
+
     // Blocks
     'create:zinc_block', 
     'create:andesite_alloy_block', 

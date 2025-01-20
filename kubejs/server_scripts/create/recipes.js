@@ -1301,36 +1301,58 @@ const registerCreateRecipes = (event) => {
 			.EUt(20)
 	})
 
-	const CREATE_OTHER_GLASS_WINDOWS =
-	[
-		[ 'dark_oak', 'tfc:wood/lumber/hickory' ],
-		[ 'mangrove', 'tfc:wood/lumber/mangrove' ],
-		[ 'ornate_iron', 'gtceu:wrought_iron_rod' ]
-	]
+    //////////////////////////////////////////////
+    // added by PersonBelowRocks
+
+    // special handling for ornate iron window
+    let ornateWindowBlock = "create:ornate_iron_window"
+    let ornateWindowPane = "create:ornate_iron_window_pane"
+
+    // crafting window block
+    event.shaped(`2x ${ornateWindowBlock}`,
+        [
+            " F ",
+            "FGF",
+            "   "
+        ],
+        {
+            G: "#forge:glass/colorless",
+            F: "gtceu:wrought_iron_rod"
+        }
+    ).id("tfg:create/shaped/ornate_iron_window")
+
+    // cutting window block into panes
+    event.shapeless(`2x ${ornateWindowPane}`,
+	[ 
+		ornateWindowBlock,
+		'#forge:tools/saws'
+	])
+	.id(`tfg:create/shapeless/ornate_iron_pane`)
 	
-	CREATE_OTHER_GLASS_WINDOWS.forEach(x => {
-		event.shaped(`2x create:${x[0]}_window`,
-		[
-			' B ',
-			'BAB'
-		], {
-			A: 'minecraft:glass',
-			B: x[1]
-		}).id(`tfg:create/shaped/${x[0]}_window`)
-		
-		event.shapeless(`2x create:${x[0]}_window_pane`,
-		[ 
-			`create:${x[0]}_window`, 
-			'#forge:tools/saws' 
-		])
-		.id(`tfg:create/shapeless/${x[0]}_window_pane`)
-		
-		event.recipes.gtceu.cutter(`tfg:create/${x[0]}_window_pane`)
-			.itemInputs(`3x create:${x[0]}_window`)
-			.itemOutputs(`8x create:${x[0]}_window_pane`)
-			.duration(40)
-			.EUt(20)
-	})
+	event.recipes.gtceu.cutter(`tfg:create/ornate_iron_pane`)
+		.itemInputs(`3x ${ornateWindowBlock}`)
+		.itemOutputs(`8x ${ornateWindowPane}`)
+		.duration(40)
+		.EUt(20)
+
+    // everycompat windows
+    global.TFC_WOOD_TYPES.forEach(wood => {
+        let id = `everycomp:c/tfc/${wood}_window`
+        let block = `everycomp:c/tfc/${wood}_window`
+        let frame = `tfc:wood/lumber/${wood}`
+
+        event.shaped(`2x ${block}`,
+            [
+                " F ",
+                "FGF",
+                "   "
+            ], {
+                G: "#forge:glass/colorless",
+                F: frame
+            }).id(id);
+    });
+
+    //////////////////////////////////////////////
 	
 	// #endregion
 }
