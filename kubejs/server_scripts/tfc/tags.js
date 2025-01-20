@@ -213,28 +213,13 @@ const registerTFCBlockTags = (event) => {
         })
     })
 
+    // make stone uncollapsable
+    event.removeAll("tfc:can_collapse")
+    event.removeAll("tfc:can_start_collapse")
+    event.removeAll("tfc:can_trigger_collapse")
+
     // Отключение ломания блоков установленных на полу
     event.add('tfcdesirepaths:trample_blacklist', 'tfc:placed_item')
-
-    // Возможность обрушения полу-блоков
-    event.add('tfc:can_collapse', '#tfg:rock_slabs')
-    event.add('tfc:can_start_collapse', '#tfg:rock_slabs')
-    event.add('tfc:can_trigger_collapse', '#tfg:rock_slabs')
-
-    // Возможность обрушения ступеней
-    event.add('tfc:can_collapse', '#tfg:rock_stairs')
-    event.add('tfc:can_start_collapse', '#tfg:rock_stairs')
-    event.add('tfc:can_trigger_collapse', '#tfg:rock_stairs')
-
-    // Возможность обрушения стен
-    event.add('tfc:can_collapse', '#tfg:rock_walls')
-    event.add('tfc:can_start_collapse', '#tfg:rock_walls')
-    event.add('tfc:can_trigger_collapse', '#tfg:rock_walls')
-
-    // Возможность обрушения руды
-    event.add('tfc:can_collapse', '#forge:ores')
-    event.add('tfc:can_start_collapse', '#forge:ores')
-    event.add('tfc:can_trigger_collapse', '#forge:ores')
     
     event.add('tfc:monster_spawns_on', '#forge:ores')
     event.add('tfc:prospectable', '#forge:ores')

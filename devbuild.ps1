@@ -41,9 +41,11 @@ Write-Output "Copying configs..."
 ReplaceDirectory("config")
 ReplaceDirectory("defaultconfigs")
 
-foreach ($savefile in Get-ChildItem "${InstancePath}/saves") {
-    foreach ($cfgFile in (Get-ChildItem "./defaultconfigs").FullName) {
-        Copy-Item "$cfgFile" "${savefile.FullName}/serverconfig/" -Force -Recurse
+foreach ($savefile in (Get-ChildItem "${InstancePath}/saves")) {
+    Write-Output "Writing server configs for savefile '$($savefile.FullName)'"
+
+    foreach ($cfgfile in (Get-ChildItem "./defaultconfigs")) {
+        Copy-Item "$($cfgFile.FullName)" -Destination "$($savefile.FullName)/serverconfig/" -Force -Recurse
     }
 }
 

@@ -20,4 +20,15 @@ const registerHandcraftedRecipes = (event) => {
         B: "gtceu:brass_plate",
         S: "minecraft:stick",
     }).id("handcrafted:hammer")
+
+    // metal bench recipe, using wrought iron.
+    // also balanced so that theyre cheaper and thus easier to build with
+    event.shaped("8x handcrafted:bench", [
+        "BPB",
+        "BPB",
+        "B B"
+    ], {
+        B: "tfc:metal/bars/wrought_iron",
+        P: "gtceu:wrought_iron_plate"
+    }).id("handcrafted:bench")
 }
