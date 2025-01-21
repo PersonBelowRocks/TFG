@@ -1918,4 +1918,14 @@ const registerGTCEURecipes = (event) => {
         .EUt(96)
         .circuit(2)
     // #endregion
+
+    // manually hammer rubber sheets so funnels and shit from create can be crafted before LV
+    event.shaped("2x gtceu:rubber_foil", [
+        "   ",
+        "HP ",
+        "   "
+    ], {
+        P: "gtceu:rubber_plate",
+        H: "#forge:tools/hammers"
+    }).id(`tfg:hammering_thin_rubber_sheets`)
 }
