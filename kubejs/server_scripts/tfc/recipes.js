@@ -1552,6 +1552,12 @@ const registerTFCRecipes = (event) => {
     event.recipes.tfc.blast_furnace(Fluid.of('tfg:pig_iron', 1), '#tfc:flux', Fluid.of('gtceu:iron', 1))
         .id('tfc:blast_furnace/pig_iron')
 
+    // manually specify querning for these stone types, since we removed them from the fluxstone tag
+    global.TFC_PREFER_DUST_FOR_GT_FLUXSTONE_RECIPES.forEach(stone => {
+        event.recipes.tfc.quern("2x tfc:powder/flux", `tfc:rock/loose/${stone}`)
+        event.recipes.tfc.quern("2x tfc:powder/flux", `tfc:rock/mossy_loose/${stone}`)
+    })
+
     //#endregion
 
     //#region metal bars

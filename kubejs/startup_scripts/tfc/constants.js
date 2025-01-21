@@ -1067,7 +1067,35 @@ global.TFC_MILKS = [
     {id: 'firmalife:coconut_milk'},
 ];
 
+// these stone types should use their DUST forms in macerator/forge hammer recipes to make flux,
+// but should be able to be processed as they are in the quern!
+global.TFC_PREFER_DUST_FOR_GT_FLUXSTONE_RECIPES = [
+    "limestone",
+    "dolomite",
+    "chalk",
+    "marble",
+]
+
 global.calcAmountOfMetal = (defaultAmount, percents) => {
     const value = defaultAmount / (100 / percents)
     return (value % 2 == 0) ? value : Math.round(value) - 1
+}
+
+/**
+ * Get the stone dust item for a given stone type which should be used in crafting recipes.
+ * The pack uses stone dusts that are added by the pack itself, or that are already in GTCEU.
+ * 
+ * @param {string} stoneType The type of stone (dolomite, marble, diorite, gneiss, etc...).
+ * 
+ * @returns The resource location of the stone dust that should be used for recipes. 
+ * Will be null if the stone type does not have a dust in the 'tfg' or 'gtceu' namespace.
+ */
+global.pickAppropriateStoneDust = (stoneType) => {
+    if (!Item.of(`gtceu:${stoneType}_dust`).isEmpty()) {
+        return `gtceu:${stoneType}_dust`
+    } else if (!Item.of(`tfg:${stoneType}_dust`).isEmpty()) {
+        return `tfg:${stoneType}_dust`
+    } else {
+        return null
+    }
 }

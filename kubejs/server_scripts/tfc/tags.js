@@ -201,6 +201,20 @@ const registerTFCItemTags = (event) => {
 
     // Удаление тегов у руд
     event.removeAllTagsFrom("/tfc:ore/[^*]+/[^*]+/")
+
+    global.TFC_PREFER_DUST_FOR_GT_FLUXSTONE_RECIPES.forEach(stone => {
+        event.remove("tfc:fluxstone", `tfc:rock/loose/${stone}`)
+        event.remove("tfc:fluxstone", `tfc:rock/mossy_loose/${stone}`)
+
+        var dust = global.pickAppropriateStoneDust(stone)
+
+        if (dust == null) {
+            console.error(`CANNOT PICK A DUST FOR STONE TYPE '${stone}'`)
+            return
+        }
+
+        event.add("tfc:fluxstone", dust)
+    })
 }
 
 const registerTFCBlockTags = (event) => {
