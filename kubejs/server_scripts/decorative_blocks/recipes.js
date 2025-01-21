@@ -8,7 +8,7 @@ const registerDecorativeBlocksRecipes = (event) => {
 
     // add beam recipes for TFC wood types
     global.TFC_WOOD_TYPES.forEach(wood => {
-        event.shaped(`everycomp:db/tfc/${wood}_beam`,
+        event.shaped(`2x everycomp:db/tfc/${wood}_beam`,
             [
                 "PLP",
                 "PLP",
@@ -21,7 +21,7 @@ const registerDecorativeBlocksRecipes = (event) => {
 
     // add palisade recipes for TFC wood types
     global.TFC_WOOD_TYPES.forEach(wood => { 
-        event.shaped(`everycomp:db/tfc/${wood}_palisade`,
+        event.shaped(`6x everycomp:db/tfc/${wood}_palisade`,
             [
                 "LPL",
                 "LPL",

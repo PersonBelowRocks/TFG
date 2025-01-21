@@ -1928,4 +1928,95 @@ const registerGTCEURecipes = (event) => {
         P: "gtceu:rubber_plate",
         H: "#forge:tools/hammers"
     }).id(`tfg:hammering_thin_rubber_sheets`)
+
+    // better recipes for light fixtures
+
+    // illuminant block
+    event.recipes.gtceu.assembler("illuminant_block")
+        .itemInputs(
+            "6x gtceu:glass_plate",
+            "2x gtceu:fine_silver_wire",
+            "gtceu:small_glowstone_dust",
+            "gtceu:glass_tube",
+        )
+        .itemOutputs("4x simplylight:illuminant_block_on")
+        .circuit(1)
+        .EUt(8)
+        .duration(120)
+
+    event.remove({id: "simplylight:illuminant_block_on"})
+
+    // illuminant slab
+    event.recipes.gtceu.assembler("illuminant_slab")
+        .itemInputs(
+            "2x gtceu:glass_plate",
+            "2x gtceu:fine_silver_wire",
+            "gtceu:small_glowstone_dust",
+            "gtceu:glass_tube",
+        )
+        .itemOutputs("6x simplylight:illuminant_slab")
+        .circuit(2)
+        .EUt(8)
+        .duration(120)
+
+    event.remove({id: "simplylight:illuminant_slab"})
+
+    // illuminant fixture
+    event.recipes.gtceu.assembler("illuminant_fixture")
+        .itemInputs(
+            "4x gtceu:glass_plate",
+            "2x gtceu:fine_silver_wire",
+            "gtceu:small_glowstone_dust",
+            "gtceu:glass_tube",
+        )
+        .itemOutputs("6x simplylight:wall_lamp")
+        .circuit(3)
+        .EUt(8)
+        .duration(120)
+
+    event.remove({id: "simplylight:walllamp"})
+
+    // illuminant rod
+    event.recipes.gtceu.assembler("illuminant_rod")
+        .itemInputs(
+            "4x gtceu:glass_plate",
+            "2x gtceu:fine_silver_wire",
+            "gtceu:small_glowstone_dust",
+            "gtceu:glass_tube",
+        )
+        .itemOutputs("8x simplylight:rodlamp")
+        .circuit(4)
+        .EUt(8)
+        .duration(120)
+
+    event.remove({id: "simplylight:rodlamp"})
+
+    // light bulb
+    event.recipes.gtceu.assembler("lightbulb")
+        .itemInputs(
+            "2x gtceu:fine_silver_wire",
+            "gtceu:small_glowstone_dust",
+            "gtceu:glass_tube",
+        )
+        .itemOutputs("8x simplylight:lightbulb")
+        .circuit(5)
+        .EUt(8)
+        .duration(120)
+
+    event.remove({id: "simplylight:bulb"})
+
+    // dynamic edge light
+    event.recipes.gtceu.assembler("edge_light")
+        .itemInputs(
+            "4x gtceu:glass_plate",
+            "2x gtceu:fine_silver_wire",
+            "gtceu:small_glowstone_dust",
+            "gtceu:glass_tube",
+        )
+        .itemOutputs("6x simplylight:edge_light")
+        .circuit(6)
+        .EUt(8)
+        .duration(120)
+
+    event.remove({id: "simplylight:edge_light"})
 }

@@ -1785,18 +1785,16 @@ const registerTFCRecipes = (event) => {
 
         // Камни -> Булыжник
         event.shaped(`tfc:rock/cobble/${stone}`, [
-            'ABA',
-            'BAB',
-            'ABA'  
+            'AA ',
+            'AA ',
+            '   '  
         ], {
             A: `tfc:rock/loose/${stone}`,
-            B: '#tfc:mortar'
         }).id(`tfc:crafting/rock/${stone}_loose_rocks_to_cobble`)
 
         event.recipes.gtceu.assembler(`${stone}_loose_rocks_to_cobble`)             
             .itemInputs(`4x tfc:rock/loose/${stone}`)
             .circuit(2)
-            .inputFluids(Fluid.of('gtceu:concrete', 72))
             .itemOutputs(`tfc:rock/cobble/${stone}`)
             .duration(50)
             .EUt(2)

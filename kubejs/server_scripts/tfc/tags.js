@@ -227,7 +227,20 @@ const registerTFCBlockTags = (event) => {
         })
     })
 
-    // make stone uncollapsable
+    // make cobble stairs, slabs, and walls landslide blocks to better reflect the properties of cobblestone
+    global.TFC_STONE_TYPES.forEach(stone => {
+        event.add("tfc:can_carve", `tfc:rock/cobble/${stone}_stairs`)
+        event.add("tfc:can_landslide", `tfc:rock/cobble/${stone}_stairs`)
+
+        event.add("tfc:can_carve", `tfc:rock/cobble/${stone}_slab`)
+        event.add("tfc:can_landslide", `tfc:rock/cobble/${stone}_slab`)
+
+        event.add("tfc:can_carve", `tfc:rock/cobble/${stone}_wall`)
+        event.add("tfc:can_landslide", `tfc:rock/cobble/${stone}_wall`)
+    })
+
+    // clear out collapse-related tags.
+    // in practice this will disable cave collapses entirely while allowing landslides to still occur
     event.removeAll("tfc:can_collapse")
     event.removeAll("tfc:can_start_collapse")
     event.removeAll("tfc:can_trigger_collapse")
