@@ -26,6 +26,7 @@ ServerEvents.tags('item', event => {
     registerSophisticatedBackpacksItemTags(event)
     registerTFCAmbientalItemTags(event)
     registerTFCItemTags(event)
+    registerTFGItemTags(event)
 
     // added by PersonBelowRocks
     registerDecorativeBlocksItemTags(event)
@@ -148,6 +149,7 @@ ServerEvents.recipes(event => {
     registerSophisticatedBackpacksRecipes(event)
     registerTfceaRecipes(event)
     registerTFCRecipes(event)
+    registerTFGRecipes(event)
     registerTFCGroomingStationRecipes(event)
     registerToolBeltRecipes(event)
     registerTreeTapRecipes(event)
