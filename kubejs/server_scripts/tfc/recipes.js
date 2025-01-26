@@ -1909,18 +1909,16 @@ const registerTFCRecipes = (event) => {
 
         // Булыжник -> Замшелый булыжник
         event.shaped(`tfc:rock/mossy_cobble/${stone}`, [
-            'ABA',
-            'BAB',
-            'ABA'  
+            'AA ',
+            'AA ',
+            '   '  
         ], {
             A: `tfc:rock/mossy_loose/${stone}`,
-            B: '#tfc:mortar'
         }).id(`tfc:crafting/rock/${stone}_mossy_loose_rocks_to_cobble`)
 
         event.recipes.gtceu.assembler(`${stone}_mossy_loose_rocks_to_mossy_cobble`)             
             .itemInputs(`4x tfc:rock/mossy_loose/${stone}`)
-            .circuit(0)
-            .inputFluids(Fluid.of('gtceu:concrete', 72))
+            .circuit(2)
             .itemOutputs(`tfc:rock/mossy_cobble/${stone}`)
             .duration(50)
             .EUt(2)
