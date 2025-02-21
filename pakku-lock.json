@@ -6151,6 +6151,67 @@
             ]
         },
         {
+            "pakku_id": "45zw02ZNAuKmzVg8",
+            "type": "MOD",
+            "side": "BOTH",
+            "slug": {
+                "curseforge": "macaws-roofs",
+                "modrinth": "macaws-roofs"
+            },
+            "name": {
+                "curseforge": "Macaw's Roofs",
+                "modrinth": "Macaw's Roofs"
+            },
+            "id": {
+                "curseforge": "352039",
+                "modrinth": "B8jaH3P1"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "mcw-roofs-2.3.1-mc1.20.1forge.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5554/957/mcw-roofs-2.3.1-mc1.20.1forge.jar",
+                    "id": "5554957",
+                    "parent_id": "352039",
+                    "hashes": {
+                        "sha1": "a5a79469d88b81037e270c49d467491f94587f92",
+                        "md5": "cacee547c4f32b57b0f238d68d4ddc2b"
+                    },
+                    "required_dependencies": [],
+                    "size": 1837373,
+                    "date_published": "2024-07-22T17:14:56.553Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "mcw-roofs-2.3.1-mc1.20.1forge.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/B8jaH3P1/versions/9Q45nZes/mcw-roofs-2.3.1-mc1.20.1forge.jar",
+                    "id": "9Q45nZes",
+                    "parent_id": "B8jaH3P1",
+                    "hashes": {
+                        "sha512": "d591089cd07ab07c0963f8ebce5d0c8513261a0357ae2f84ee6563bf2d2c53c6ff8d7eeb37177a083030a6231fbbeebc4d87a018eec18743a1dcdd634eeb0c24",
+                        "sha1": "a5a79469d88b81037e270c49d467491f94587f92"
+                    },
+                    "required_dependencies": [],
+                    "size": 1837373,
+                    "date_published": "2024-07-22T17:29:36.649784Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "CkVybeyxxkbVpLdx",
             "type": "MOD",
             "side": "CLIENT",
