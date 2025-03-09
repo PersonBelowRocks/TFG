@@ -31,6 +31,7 @@ ServerEvents.tags('item', event => {
     // added by PersonBelowRocks
     registerDecorativeBlocksItemTags(event)
     registerHandcraftedItemTags(event)
+    registerMcwRoofsItemTags(event)
 })
 
 /**
@@ -60,6 +61,7 @@ ServerEvents.tags('block', event => {
     // added by PersonBelowRocks
     registerDecorativeBlocksBlockTags(event)
     registerHandcraftedBlockTags(event)
+    registerMcwRoofsBlockTags(event)
 })
 
 /**
@@ -158,4 +160,5 @@ ServerEvents.recipes(event => {
     // added by PersonBelowRocks
     registerDecorativeBlocksRecipes(event)
     registerHandcraftedRecipes(event)
+    registerMcwRoofsRecipes(event)
 })

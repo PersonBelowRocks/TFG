@@ -2928,7 +2928,10 @@
             ]
         },
         {
-            "pakku_id": "ZinbfDQDWX2wN83c",
+            "pakku_id": "wrAB0tPfGUn2zKUx",
+            "pakku_links": [
+                "3B5EGC3hh54PlLuy"
+            ],
             "type": "MOD",
             "side": "BOTH",
             "slug": {
@@ -2945,31 +2948,8 @@
             },
             "files": [
                 {
-                    "type": "modrinth",
-                    "file_name": "everycomp-1.20-2.7.12.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/eiktJyw1/versions/atv3A4RT/everycomp-1.20-2.7.12.jar",
-                    "id": "atv3A4RT",
-                    "parent_id": "eiktJyw1",
-                    "hashes": {
-                        "sha512": "beb1972e9f15864d3e525e3158339e095111ee6c149a8eb5c82def4e17d4f1ffc2fae269136f05684e34201b7437a18a7721a06437ac56a31ed9f90dca31946e",
-                        "sha1": "538f3788f1c28aed1881f1a550463b44831deeab"
-                    },
-                    "required_dependencies": [
-                        "twkfQtEc"
-                    ],
-                    "size": 2612098,
-                    "date_published": "2025-01-18T09:57:15.498232Z"
-                },
-                {
                     "type": "curseforge",
-                    "file_name": "everycomp-1.20-2.7.12.jar",
+                    "file_name": "everycomp-1.20-2.7.19.jar",
                     "mc_versions": [
                         "1.20.1"
                     ],
@@ -2977,18 +2957,41 @@
                         "forge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6098/843/everycomp-1.20-2.7.12.jar",
-                    "id": "6098843",
+                    "url": "https://edge.forgecdn.net/files/6228/634/everycomp-1.20-2.7.19.jar",
+                    "id": "6228634",
                     "parent_id": "628539",
                     "hashes": {
-                        "sha1": "538f3788f1c28aed1881f1a550463b44831deeab",
-                        "md5": "3b22a09f80dbaa0aadfba9168b6c0795"
+                        "sha1": "d68f369569683741bc2a4c18798f414eadba85c9",
+                        "md5": "623678b729237932abcdd0292b079354"
                     },
                     "required_dependencies": [
                         "499980"
                     ],
-                    "size": 2612098,
-                    "date_published": "2025-01-18T09:57:04.457Z"
+                    "size": 2619183,
+                    "date_published": "2025-02-24T04:38:21.017Z"
+                },
+                {
+                    "type": "modrinth",
+                    "file_name": "everycomp-1.20-2.7.19.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/eiktJyw1/versions/13ikcRzG/everycomp-1.20-2.7.19.jar",
+                    "id": "13ikcRzG",
+                    "parent_id": "eiktJyw1",
+                    "hashes": {
+                        "sha512": "7a2343bedbe6aa9c86df730f0010a6442f4fa57571cc7bc347e7052dc7573d8779b74bd1dd1e72915182bd6e5c5cd542af8a11e3ef5bc9823b9451f1295db277",
+                        "sha1": "d68f369569683741bc2a4c18798f414eadba85c9"
+                    },
+                    "required_dependencies": [
+                        "twkfQtEc"
+                    ],
+                    "size": 2619183,
+                    "date_published": "2025-02-24T04:38:32.263381Z"
                 }
             ]
         },
@@ -6472,7 +6475,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "moonlight-1.20-2.13.51-forge.jar",
+                    "file_name": "moonlight-1.20-2.13.71-forge.jar",
                     "mc_versions": [
                         "1.20.1"
                     ],
@@ -6481,20 +6484,20 @@
                         "neoforge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/Qyu7D5xj/moonlight-1.20-2.13.51-forge.jar",
-                    "id": "Qyu7D5xj",
+                    "url": "https://cdn.modrinth.com/data/twkfQtEc/versions/z4VYWtIk/moonlight-1.20-2.13.71-forge.jar",
+                    "id": "z4VYWtIk",
                     "parent_id": "twkfQtEc",
                     "hashes": {
-                        "sha512": "2108dd8186a88ef4a60a75b74769f3dbfefefe7193eb863ed4c2b5ffbd2d3f97adefc115a2ac376b5185cf64bd1649b0d6b189024f11bda3329470004156e73d",
-                        "sha1": "c32ada3857b70dff88aa698e4c2f0a1d36b956d6"
+                        "sha512": "7476ee22458d9d47a510a3afb7494df13587e2283a716ebd848015a81dd74af6fb0e6429035461de11aa9409b353b009570542329a0972b0a2c2ec115a26e773",
+                        "sha1": "b82dc49ab03290a1724ba80fada67a2cfc623c5a"
                     },
                     "required_dependencies": [],
-                    "size": 1223674,
-                    "date_published": "2025-01-18T17:33:40.656520Z"
+                    "size": 1248826,
+                    "date_published": "2025-03-01T02:47:40.381969Z"
                 },
                 {
                     "type": "curseforge",
-                    "file_name": "moonlight-1.20-2.13.51-forge.jar",
+                    "file_name": "moonlight-1.20-2.13.71-forge.jar",
                     "mc_versions": [
                         "1.20.1"
                     ],
@@ -6503,16 +6506,16 @@
                         "forge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6100/164/moonlight-1.20-2.13.51-forge.jar",
-                    "id": "6100164",
+                    "url": "https://edge.forgecdn.net/files/6249/659/moonlight-1.20-2.13.71-forge.jar",
+                    "id": "6249659",
                     "parent_id": "499980",
                     "hashes": {
-                        "sha1": "c32ada3857b70dff88aa698e4c2f0a1d36b956d6",
-                        "md5": "37ec156a26377b695017e4568990427f"
+                        "sha1": "b82dc49ab03290a1724ba80fada67a2cfc623c5a",
+                        "md5": "f2e3efa625174793129f3800e16f8793"
                     },
                     "required_dependencies": [],
-                    "size": 1223674,
-                    "date_published": "2025-01-18T17:33:26.290Z"
+                    "size": 1248826,
+                    "date_published": "2025-03-01T02:47:26.867Z"
                 }
             ]
         },
@@ -9604,7 +9607,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "Xaeros_Minimap_24.4.0_Forge_1.20.jar",
+                    "file_name": "Xaeros_Minimap_25.1.0_Forge_1.20.jar",
                     "mc_versions": [
                         "1.20",
                         "1.20.1"
@@ -9613,20 +9616,20 @@
                         "forge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/dvP335Jb/Xaeros_Minimap_24.4.0_Forge_1.20.jar",
-                    "id": "dvP335Jb",
+                    "url": "https://cdn.modrinth.com/data/1bokaNcj/versions/lzOsKpew/Xaeros_Minimap_25.1.0_Forge_1.20.jar",
+                    "id": "lzOsKpew",
                     "parent_id": "1bokaNcj",
                     "hashes": {
-                        "sha512": "3d43bb909a9e1a131df98549e157da1a2a77e47c4503b75e3c20a2bc16671c97c8cf9058edf970ad9e0716d27e25f828e330801c33c47762c8c5f597eb5e76bb",
-                        "sha1": "2ec40354f13729c18a9f3bc51c2e3d2fbcc0d165"
+                        "sha512": "88c0f3364339076aa33d5454819fb4253f38ce6bc936813864ae2acdc6c51e1ead9adc0c3c79dce2b59edc3a1d4b8b6da8e50a120b2a8002c9eb37807c922efb",
+                        "sha1": "17baacd5fd6b343c7f0828b33209968aebf1f4ab"
                     },
                     "required_dependencies": [],
-                    "size": 1531047,
-                    "date_published": "2024-09-02T07:06:20.850273Z"
+                    "size": 1671075,
+                    "date_published": "2025-02-12T10:04:46.919047Z"
                 },
                 {
                     "type": "curseforge",
-                    "file_name": "Xaeros_Minimap_24.4.0_Forge_1.20.jar",
+                    "file_name": "Xaeros_Minimap_25.1.0_Forge_1.20.jar",
                     "mc_versions": [
                         "1.20.1",
                         "1.20"
@@ -9635,16 +9638,16 @@
                         "forge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/5685/657/Xaeros_Minimap_24.4.0_Forge_1.20.jar",
-                    "id": "5685657",
+                    "url": "https://edge.forgecdn.net/files/6184/430/Xaeros_Minimap_25.1.0_Forge_1.20.jar",
+                    "id": "6184430",
                     "parent_id": "263420",
                     "hashes": {
-                        "sha1": "2ec40354f13729c18a9f3bc51c2e3d2fbcc0d165",
-                        "md5": "8e6213d8af09b40282230f0dd3abdc7c"
+                        "sha1": "17baacd5fd6b343c7f0828b33209968aebf1f4ab",
+                        "md5": "2157a926cd7b8e8c1b8ed607b0fde7a9"
                     },
                     "required_dependencies": [],
-                    "size": 1531047,
-                    "date_published": "2024-09-02T06:53:39.747Z"
+                    "size": 1671075,
+                    "date_published": "2025-02-12T09:46:04.387Z"
                 }
             ]
         },
@@ -9667,7 +9670,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "XaerosWorldMap_1.39.0_Forge_1.20.jar",
+                    "file_name": "XaerosWorldMap_1.39.4_Forge_1.20.jar",
                     "mc_versions": [
                         "1.20",
                         "1.20.1"
@@ -9676,20 +9679,20 @@
                         "forge"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/zGpACLsy/XaerosWorldMap_1.39.0_Forge_1.20.jar",
-                    "id": "zGpACLsy",
+                    "url": "https://cdn.modrinth.com/data/NcUtCpym/versions/SMViC4Yw/XaerosWorldMap_1.39.4_Forge_1.20.jar",
+                    "id": "SMViC4Yw",
                     "parent_id": "NcUtCpym",
                     "hashes": {
-                        "sha512": "009065642ee160718285a2bde5a4f9b297303f9837f48169f9c74707cf30bdf57e1d614d2507becc497efbad15ad6ecafd1d9c804ab3b66a0688b43946622dd6",
-                        "sha1": "33704b6dd2ee6fbf1da0cffcf2001bf7f1c3dea4"
+                        "sha512": "2b1060839325fd90ced491d7e58306d0473c616fcf7ca9714b70719bac03e0a2d37fd1b9ceca1ff37167b88527ee935e7b715a07486e430a26b26f953e3bb721",
+                        "sha1": "cb2027cd4cb87704750c666205d16b6a0234a63d"
                     },
                     "required_dependencies": [],
-                    "size": 930284,
-                    "date_published": "2024-08-24T07:30:57.975290Z"
+                    "size": 933184,
+                    "date_published": "2025-02-20T09:44:39.875266Z"
                 },
                 {
                     "type": "curseforge",
-                    "file_name": "XaerosWorldMap_1.39.0_Forge_1.20.jar",
+                    "file_name": "XaerosWorldMap_1.39.4_Forge_1.20.jar",
                     "mc_versions": [
                         "1.20.1",
                         "1.20"
@@ -9698,16 +9701,16 @@
                         "forge"
                     ],
                     "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/5658/224/XaerosWorldMap_1.39.0_Forge_1.20.jar",
-                    "id": "5658224",
+                    "url": "https://edge.forgecdn.net/files/6212/636/XaerosWorldMap_1.39.4_Forge_1.20.jar",
+                    "id": "6212636",
                     "parent_id": "317780",
                     "hashes": {
-                        "sha1": "33704b6dd2ee6fbf1da0cffcf2001bf7f1c3dea4",
-                        "md5": "56bacc411ba41fbe016e9c53dbc283e6"
+                        "sha1": "cb2027cd4cb87704750c666205d16b6a0234a63d",
+                        "md5": "3da6919fb4f0c993772c073d787403e1"
                     },
                     "required_dependencies": [],
-                    "size": 930284,
-                    "date_published": "2024-08-24T07:16:45.560Z"
+                    "size": 933184,
+                    "date_published": "2025-02-20T09:16:59.333Z"
                 }
             ]
         },

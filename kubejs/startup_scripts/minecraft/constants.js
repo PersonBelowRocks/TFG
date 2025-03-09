@@ -1,4 +1,6 @@
-// priority: 0
+// priority: 10
+// the priority for this file is higher than other constant files since other constant files might compute constants from
+// constants in this file.
 
 /**
  * Список хранит предметы,
