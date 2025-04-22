@@ -47,33 +47,6 @@ const registerGTCEURecipes = (event) => {
 
     //#endregion
 
-    // allow crushing loose stone into dust
-    global.TFC_STONE_TYPES.forEach(stone => {
-        var outputDust = global.pickAppropriateStoneDust(stone)
-
-        if (outputDust == null) {
-            console.error(`CANNOT PICK A DUST FOR STONE TYPE '${stone}'`)
-            return
-        }
-
-        // regular
-        event.recipes.gtceu.macerator(`loose_${stone}_rock_to_dust`)
-            .itemInputs(`tfc:rock/loose/${stone}`)
-            .itemOutputs(outputDust)
-            .duration(60)
-            .EUt(16)
-            .circuit(1)
-        
-        // mossy
-        event.recipes.gtceu.macerator(`mossy_loose_${stone}_rock_to_dust`)
-            .itemInputs(`tfc:rock/mossy_loose/${stone}`)
-            .itemOutputs(outputDust)
-            .chancedOutput("gtceu:plant_ball", 120, 50)
-            .duration(60)
-            .EUt(16)
-            .circuit(1)
-    })
-
 	event.recipes.gtceu.macerator('flux')
 		.itemInputs('#tfc:fluxstone')
 		.itemOutputs('2x tfc:powder/flux')
@@ -104,7 +77,7 @@ const registerGTCEURecipes = (event) => {
         .duration(800)
         .EUt(7)
         .circuit(3)
-  
+
 	event.smelting('4x tfc:powder/wood_ash', '1x #minecraft:logs_that_burn').id('tfg:wood_ash')
 
 	//#region Выход: Соленая пыль + Вода
@@ -1031,104 +1004,6 @@ const registerGTCEURecipes = (event) => {
 	event.shapeless('gtceu:nickel_octal_cable', ['gtceu:nickel_octal_wire', '#forge:plates/rubber', '#forge:plates/rubber', '#forge:plates/rubber', '#forge:plates/rubber', '#forge:plates/rubber', '#forge:plates/rubber', '#forge:plates/rubber', '#forge:plates/rubber'])
 		.id('tfg:shapeless/nickel_octal_cable')
 
-    // manually hammer rubber sheets so funnels and shit from create can be crafted before LV
-    event.shaped("2x gtceu:rubber_foil", [
-        "   ",
-        "HP ",
-        "   "
-    ], {
-        P: "gtceu:rubber_plate",
-        H: "#forge:tools/hammers"
-    }).id(`tfg:hammering_thin_rubber_sheets`)
-
-    // better recipes for light fixtures
-
-    // illuminant block
-    event.recipes.gtceu.assembler("illuminant_block")
-        .itemInputs(
-            "6x gtceu:glass_plate",
-            "2x gtceu:fine_silver_wire",
-            "gtceu:small_glowstone_dust",
-            "gtceu:glass_tube",
-        )
-        .itemOutputs("4x simplylight:illuminant_block_on")
-        .circuit(1)
-        .EUt(8)
-        .duration(120)
-
-    event.remove({id: "simplylight:illuminant_block_on"})
-
-    // illuminant slab
-    event.recipes.gtceu.assembler("illuminant_slab")
-        .itemInputs(
-            "2x gtceu:glass_plate",
-            "2x gtceu:fine_silver_wire",
-            "gtceu:small_glowstone_dust",
-            "gtceu:glass_tube",
-        )
-        .itemOutputs("6x simplylight:illuminant_slab")
-        .circuit(2)
-        .EUt(8)
-        .duration(120)
-
-    event.remove({id: "simplylight:illuminant_slab"})
-
-    // illuminant fixture
-    event.recipes.gtceu.assembler("illuminant_fixture")
-        .itemInputs(
-            "4x gtceu:glass_plate",
-            "2x gtceu:fine_silver_wire",
-            "gtceu:small_glowstone_dust",
-            "gtceu:glass_tube",
-        )
-        .itemOutputs("6x simplylight:wall_lamp")
-        .circuit(3)
-        .EUt(8)
-        .duration(120)
-
-    event.remove({id: "simplylight:walllamp"})
-
-    // illuminant rod
-    event.recipes.gtceu.assembler("illuminant_rod")
-        .itemInputs(
-            "4x gtceu:glass_plate",
-            "2x gtceu:fine_silver_wire",
-            "gtceu:small_glowstone_dust",
-            "gtceu:glass_tube",
-        )
-        .itemOutputs("8x simplylight:rodlamp")
-        .circuit(4)
-        .EUt(8)
-        .duration(120)
-
-    event.remove({id: "simplylight:rodlamp"})
-
-    // light bulb
-    event.recipes.gtceu.assembler("lightbulb")
-        .itemInputs(
-            "2x gtceu:fine_silver_wire",
-            "gtceu:small_glowstone_dust",
-            "gtceu:glass_tube",
-        )
-        .itemOutputs("8x simplylight:lightbulb")
-        .circuit(5)
-        .EUt(8)
-        .duration(120)
-
-    event.remove({id: "simplylight:bulb"})
-
-    // dynamic edge light
-    event.recipes.gtceu.assembler("edge_light")
-        .itemInputs(
-            "4x gtceu:glass_plate",
-            "2x gtceu:fine_silver_wire",
-            "gtceu:small_glowstone_dust",
-            "gtceu:glass_tube",
-        )
-        .itemOutputs("6x simplylight:edge_light")
-        .circuit(6)
-        .EUt(8)
-        .duration(120)
-
-    event.remove({id: "simplylight:edge_light"})
+	/// added by PersonBelowRocks
+	customGregtechRecipes(event)
 }

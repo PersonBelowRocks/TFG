@@ -266,19 +266,7 @@ const registerTFCItemTags = (event) => {
     event.add('minecraft:piglin_loved', 'tfc:ore/normal_native_gold')
     event.add('minecraft:piglin_loved', 'tfc:ore/rich_native_gold')
 
-    global.TFC_PREFER_DUST_FOR_GT_FLUXSTONE_RECIPES.forEach(stone => {
-        event.remove("tfc:fluxstone", `tfc:rock/loose/${stone}`)
-        event.remove("tfc:fluxstone", `tfc:rock/mossy_loose/${stone}`)
-
-        var dust = global.pickAppropriateStoneDust(stone)
-
-        if (dust == null) {
-            console.error(`CANNOT PICK A DUST FOR STONE TYPE '${stone}'`)
-            return
-        }
-
-        event.add("tfc:fluxstone", dust)
-    })
+    customTFCItemTags(event)
 }
 
 const registerTFCBlockTags = (event) => {
