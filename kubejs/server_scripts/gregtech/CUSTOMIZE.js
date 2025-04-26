@@ -31,8 +31,7 @@ function crushingGravelToDust(event) {
             .itemInputs(`tfc:rock/gravel/${stone}`)
             .itemOutputs(outputDust)
             .duration(2.0 * 20)
-            .EUt(8)
-            .circuit(1);
+            .EUt(8);
     })
 }
 

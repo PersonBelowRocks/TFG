@@ -17,7 +17,7 @@ const registerHandcraftedRecipes = (event) => {
         " SB",
         "S  "
     ], {
-        B: "gtceu:brass_plate",
+        B: "#forge:plates/brass",
         S: "minecraft:stick",
     }).id("handcrafted:hammer")
 
