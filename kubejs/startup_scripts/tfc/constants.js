@@ -1017,6 +1017,18 @@ global.TFC_MILKS = [
     {id: 'firmalife:coconut_milk'},
 ];
 
+global.TFC_ALCOHOL = [
+    {id: 'tfc:beer'},
+    {id: 'tfc:cider'},
+    {id: 'tfc:rum'},
+    {id: 'tfc:sake'},
+    {id: 'tfc:vodka'},
+    {id: 'tfc:whiskey'},
+    {id: 'tfc:corn_whiskey'},
+    {id: 'tfc:rye_whiskey'},
+    {id: 'firmalife:mead'},
+];
+
 // these stone types should use their DUST forms in macerator/forge hammer recipes to make flux,
 // but should be able to be processed as they are in the quern!
 global.TFC_PREFER_DUST_FOR_GT_FLUXSTONE_RECIPES = [

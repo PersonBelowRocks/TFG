@@ -20,12 +20,13 @@ jobs:
     name: 🖥️ Project Info
     runs-on: ubuntu-latest
     outputs:
-      project_version: ${{ steps.check.outputs.version }}
-      project_name: ${{ steps.pakku_info.outputs.name }}
-      project_full_name: ${{ steps.pakku_info.outputs.name }}-${{ steps.check.outputs.version }}
+      project_version: ${{ steps.check.outputs.project_version }}
+      project_name: ${{ steps.check.outputs.project_name }}
+      project_full_name: ${{ steps.check.outputs.project_name }}-${{ steps.check.outputs.project_version }}
       changelog: ${{ steps.changelog.outputs.description }}
       diff: ${{ steps.read_diff.outputs.diff }}
-      release_exists: ${{ steps.check_tag.outputs.exists == 'true' && env.DEV_ENVIRONMENT == 'false' }}
+      exists: ${{ steps.check.outputs.exists }}
+      make_release: ${{ steps.check.outputs.make_release }}
     
     steps:
       - name: Checkout
@@ -144,7 +145,7 @@ jobs:
         id: determine_version
         shell: bash
         run: |
-          if [ ${{ env.DEV_ENVIRONMENT }} || steps.pakku_info.outputs.version ]; then
+          if ${{ env.DEV_ENVIRONMENT == 'true' }}; then
             echo "version=unreleased" >> $GITHUB_OUTPUT
           else
             echo "version=${{ steps.pakku_info.outputs.version }}" >> $GITHUB_OUTPUT
@@ -158,16 +159,22 @@ jobs:
           version: ${{ steps.determine_version.outputs.version }}
         continue-on-error: true
 
-      - name: 🔍 Check if changelog is empty
+      - name: 🔍 Check
         id: check
         shell: bash
         run: |
-          if [ ${{ env.DEV_ENVIRONMENT }} || ${{ steps.changelog.outcome }} == 'failure' ]; then
-              echo "version=build_#${{ github.run_number }}" >> $GITHUB_OUTPUT
-              echo "status=Unreleased" >> $GITHUB_OUTPUT
-          else
-            echo "status=${{ env.RELEASE_TYPE }}" >> $GITHUB_OUTPUT
-            echo "version=${{ steps.pakku_info.outputs.version }}" >> $GITHUB_OUTPUT
+          echo "make_release=${{ steps.check_tag.outputs.exists == 'false' && env.DEV_ENVIRONMENT == 'false' }}" >> $GITHUB_OUTPUT
+          echo "exists=${{ steps.check_tag.outputs.exists }}" >> $GITHUB_OUTPUT
+
+          echo "project_name=${{ steps.pakku_info.outputs.name }}" >> $GITHUB_OUTPUT
+          echo "project_version=${{ steps.pakku_info.outputs.version }}" >> $GITHUB_OUTPUT
+          echo "release_type=${{ env.RELEASE_TYPE }}" >> $GITHUB_OUTPUT
+
+          echo "minecraft_version=${{ steps.pakku_lock_info.outputs.mc_versions }}" >> $GITHUB_OUTPUT
+
+          if ${{ env.DEV_ENVIRONMENT == 'true' && steps.changelog.outcome == 'failure' }}; then
+              echo "project_version=build_#${{ github.run_number }}" >> $GITHUB_OUTPUT
+              echo "release_type=Unreleased" >> $GITHUB_OUTPUT
           fi
 
       - name: 📄 Format diff
@@ -184,13 +191,14 @@ jobs:
         uses: WcAServices/markdown-template-action@v1.1.1
         with:
           template: |
-            📃 **Name**: ${{ steps.pakku_info.outputs.name }}
-            📃 **Release**:  `${{ steps.check.outputs.version }}`
-            📃 **Release Type**: `${{ steps.check.outputs.status }}`
-            📃 **Game Version**: `${{ steps.pakku_lock_info.outputs.mc_versions }}`
+            📃 **Name**: ${{ steps.check.outputs.project_name }}
+            📃 **Release**:  `${{ steps.check.outputs.project_version }}`
+            📃 **Release Type**: `${{ steps.check.outputs.release_type }}`
+            📃 **Game Version**: `${{ steps.check.outputs.minecraft_version }}`
 
             📃 **Dev Environment**: `${{ env.DEV_ENVIRONMENT }}`
-            📃 **Tag Exists**: `${{ steps.check_tag.outputs.exists }}`
+            📃 **Tag Exists**: `${{ steps.check.outputs.exists }}`
+            📃 **Make Release**: `${{ steps.check.outputs.make_release }}`
             
 
             ${{ steps.changelog.outputs.description }}
@@ -332,7 +340,7 @@ jobs:
           mkdir -p .pakku/multimc-overrides/flame
           mv -vf ./build/.cache/curseforge/manifest.json .pakku/multimc-overrides/flame/manifest.json
           mv -vf ./build/.cache/curseforge/overrides .pakku/multimc-overrides/.minecraft
-          mv -vf ./mods .pakku/multimc-overrides/.minecraft/mods
+          mv -vf ./mods/* .pakku/multimc-overrides/.minecraft/mods/
           cd .pakku/multimc-overrides/
           
           zip -r ${{ needs.info.outputs.project_full_name }}-multimc.zip icon.png mmc-pack.json instance.cfg .minecraft/ flame/
@@ -348,7 +356,7 @@ jobs:
     name: 🚀 Release to GitHub
     needs: [info, build-modpack, build-server, build-multimc]
     runs-on: ubuntu-latest
-    if: needs.info.outputs.release_exists == 'false'
+    if: ${{ needs.info.outputs.make_release == 'true' }}
     outputs:
       url: ${{ steps.release.outputs.url }}
 
@@ -398,10 +406,11 @@ jobs:
 
       - name: 🚀 Create release
         id: release
-        uses: softprops/action-gh-release@v2.2.1
+        uses: softprops/action-gh-release@v2.2.2
         with:
           name: ${{ needs.info.outputs.project_version }}
           tag_name: ${{ needs.info.outputs.project_version }}
+          target_commitish: ${{ github.ref_name }}
           body: |
             ${{ needs.info.outputs.changelog }}
             ${{ steps.format_diff.outputs.text }}
@@ -417,7 +426,7 @@ jobs:
     name: 🚀 Release to CurseForge
     needs: [info, build-modpack, build-server, release-github]
     runs-on: ubuntu-latest
-    if: needs.info.outputs.release_exists == 'false'
+    if: ${{ needs.info.outputs.make_release == 'true' }}
     outputs:
       id: ${{ steps.release.outputs.id }}
 
